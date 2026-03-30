@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pâtisserie Délice</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+}
+
+/* HEADER */
+header {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+/* NAV */
+nav {
+    background-color: #ff85c1;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 30px;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* PRODUITS */
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ffb6c1;
+}
+
+/* FORM */
+form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* VIDEO */
+video, iframe {
+    border-radius: 10px;
+}
+
+.video-box {
+    width: 100%;
+    height: 300px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <!-- LOGO -->
+    <img src="logo patisserie.png" alt="Logo Pâtisserie Délice" class="logo">
+    <h1>Pâtisserie Délice</h1>
+    <p>Les meilleurs gâteaux faits avec amour ❤️</p>
+</header>
+
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#video">Vidéo</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil">
+    <h2>Bienvenue</h2>
+    <p>Découvrez nos délicieuses créations sucrées.</p>
+</section>
+
+<!-- IMAGES -->
+<section id="produits">
+    <h2>Nos Délices 🍰</h2>
+
+   <div class="gallery">
+        
+        <!-- IMAGE 1 -->
+        <div class="box">
+            <p>Image gâteau 1</p>
+            <img src="imag 1.png" width="100%" alt="Gâteau 1"> 
+        </div>
+
+        <!-- IMAGE 2 -->
+        <div class="box">
+            <p>Image gâteau 2</p>
+            <img src="imag 2.png" width="100%" alt="Gâteau 2"> 
+        </div>
+
+        <!-- IMAGE 3 -->
+        <div class="box">
+            <p>Image gâteau 3</p>
+            <img src="imag 3.png" width="100%" alt="Gâteau 3"> 
+        </div>
+
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+    <h2>Notre Vidéo</h2>
+
+    <div class="box video-box">
+       
+        <video controls width="20%">
+            <source src="video 1.mp4" type="video/mp4">
+        </video>
+       
+    </div> 
+<!--produit-->
+</section>
+<header>
+    <h1>Pâtisserie Délice 🍰</h1>
+    <p>Commandez vos gâteaux facilement</p>
+</header>
+
+<section>
+<h2>Nos Produits</h2>
+
+<div class="products">
+
+
+<div class="card">
+    <p>Gâteau Chocolat</p>
+    <p>50 DH</p>
+    <label><input type="checkbox"> Ajouter au panier</label>
+</div>
+
+<div class="card">
+    <p>Gâteau Fraise</p>
+    <p>60 DH</p>
+    <label><input type="checkbox"> Ajouter au panier</label>
+</div>
+
+<div class="card">
+    <p>Gâteau Vanille</p>
+    <p>45 DH</p>
+    <label><input type="checkbox"> Ajouter au panier</label>
+</div>
+
+
+</div>
+</section>
+
+<!-- COMMANDE -->
+<section>
+<h2>Commande</h2>
+
+<form>
+<input type="text" placeholder="Nom" required>
+<input type="text" placeholder="Prénom" required>
+<input type="tel" placeholder="Téléphone" required>
+
+<label for="city">Ville</label>
+<select id="city" name="city" required>
+<option>Casablanca</option>
+<option>Rabat</option>
+<option>Marrakech</option>
+</select>
+
+<textarea placeholder="Message sur le gâteau"></textarea>
+
+<button type="submit">Commander</button>
+</form>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email : contact@patisserie.com</p>
+    <p>Téléphone : 07 67 86 70 11</p>
+</section>
+
+<footer>
+    <p>© 2026 Pâtisserie Délice</p>
+</footer>
+
+</body>
+</html>          
+
