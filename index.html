@@ -212,28 +212,7 @@ footer {
 </section>
 
 <!-- COMMANDE -->
-<section>
-<h2>Commande</h2>
 
-<form>
-<input type="text" placeholder="Nom" required>
-<input type="text" placeholder="Prénom" required>
-<input type="tel" placeholder="Téléphone" required>
-
-<label for="city">Ville</label>
-<select id="city" name="city" required>
-<option>Casablanca</option>
-<option>Rabat</option>
-<option>Marrakech</option>
-<option>Agadir</option>
-</select>
-
-<textarea placeholder="Message sur le gâteau"></textarea>
-
-<button type="submit">Commander</button>
-</form>
-
-</section>
 
 
 <section>
@@ -241,8 +220,11 @@ footer {
 
 <div id="cart"></div>
 
-<input type="text" id="nom" placeholder="Nom">
-<input type="tel" id="phone" placeholder="Téléphone">
+<input type="text" placeholder="Nom" required>
+<input type="text" placeholder="Prénom" required>
+<input type="tel" placeholder="Téléphone" required>
+<input type="text" placeholder="Ville" required>
+
 
 <button onclick="sendOrder()">Valider la commande</button>
 </section>
