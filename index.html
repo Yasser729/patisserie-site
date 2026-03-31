@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<img src="logo patisserie.png" class="logo" alt="Logo Pâtisserie Délice" width="200" height="200">
 <title>Pâtisserie Délice</title>
 
 <style>
@@ -12,7 +13,6 @@ body {
     background-color: #fff0f5;
 }
 
-/* HEADER */
 header {
     background-color: #ff69b4;
     color: white;
@@ -22,10 +22,8 @@ header {
 
 .logo {
     width: 200px;
-    margin-bottom: 10px;
 }
 
-/* NAV */
 nav {
     background-color: #ff85c1;
     padding: 10px;
@@ -39,31 +37,10 @@ nav a {
     font-weight: bold;
 }
 
-/* SECTIONS */
 section {
     padding: 30px;
 }
 
-/* GALLERY */
-.gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.box {
-    width: 300px;
-    height: 200px;
-}
-
-.box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* PRODUITS */
 .products {
     display: flex;
     gap: 20px;
@@ -79,21 +56,6 @@ section {
     border: 1px solid #ffb6c1;
 }
 
-/* FORM */
-form {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
 button {
     background: #ff69b4;
     color: white;
@@ -102,17 +64,19 @@ button {
     cursor: pointer;
 }
 
-/* VIDEO */
-video, iframe {
+#cart {
+    background: white;
+    padding: 15px;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.video-box {
+input {
     width: 100%;
-    height: 300px;
+    padding: 10px;
+    margin: 8px 0;
 }
 
-/* FOOTER */
 footer {
     background-color: #ff69b4;
     color: white;
@@ -120,124 +84,94 @@ footer {
     padding: 15px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <!-- LOGO -->
-    <img src="logo patisserie.png" alt="Logo Pâtisserie Délice" class="logo">
-    <h1>Pâtisserie Délice</h1>
-    <p>Les meilleurs gâteaux faits avec amour ❤️</p>
+    <h1>Pâtisserie Délice 🍰</h1>
 </header>
 
 <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#produits">Produits</a>
-    <a href="#video">Vidéo</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Accueil</a>
 </nav>
-
-<section id="accueil">
-    <h2>Bienvenue</h2>
-    <p>Découvrez nos délicieuses créations sucrées.</p>
-</section>
-
-<!-- IMAGES -->
-<section id="produits">
-    <h2>Nos Délices 🍰</h2>
-
-   <div class="gallery">
-        
-        <!-- IMAGE 1 -->
-        <div class="box">
-            <p>Image gâteau 1</p>
-            <img src="imag 1.png" width="100%" alt="Gâteau 1"> 
-        </div>
-
-        <!-- IMAGE 2 -->
-        <div class="box">
-            <p>Image gâteau 2</p>
-            <img src="imag 2.png" width="100%" alt="Gâteau 2"> 
-        </div>
-
-        <!-- IMAGE 3 -->
-        <div class="box">
-            <p>Image gâteau 3</p>
-            <img src="imag 3.png" width="100%" alt="Gâteau 3"> 
-        </div>
-
-    </div>
-</section>
-
-<!-- VIDEO -->
-<section id="video">
-    <h2>Notre Vidéo</h2>
-
-    <div class="box video-box">
-       
-        <video controls width="300"height="200>
-            <source src="video2.mp4" type="video/mp4">
-        </video>
-       
-    </div> 
-<!--produit-->
-</section>
-<header>
-    <h1>Pâtisserie Délice 🍰</h1>
-    <p>Commandez vos gâteaux facilement</p>
-</header>
 
 <section>
 <h2>Nos Produits</h2>
 
+<div class="products">
+
 <div class="card">
-    <p>Gâteau Chocolat</p>
-    <p class="price">50</p>
+    <p>🍫 Gâteau Chocolat Fondant</p>
+     <img src="Fondant_Chocolat_Intense.png" width="100%">
+    <p>50 DH</p>
     <button onclick="addToCart('Gâteau Chocolat', 50)">Ajouter</button>
 </div>
 
 <div class="card">
-    <p>Gâteau Fraise</p>
-    <p class="price">60</p>
+    <p>🍓 Gâteau Fraise Délice</p>
+     <img src="Gâteau_Fraise_Délice.png" width="100%">
+    <p>60 DH</p>
     <button onclick="addToCart('Gâteau Fraise', 60)">Ajouter</button>
 </div>
 
 <div class="card">
-    <p>Gâteau Vanille</p>
-    <p class="price">45</p>
+    <p>🍦 Nuage Vanille Crémeux</p>
+     <img src="Nuage_Vanille_Crémeux.png" width="100%">
+    <p>45 DH</p>
     <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
 </div>
+<div class="card">
+    <p>❤️ Red Velvet Passion</p>
+     <img src="Red_Velvet_Passion.png" width="100%">
+    <p>70 DH</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
+</div>
+<div class="card">
+    <p>🍯 Miel & Amandes Douceur</p>
+     <img src="Miel_&_Amandes_Douceur.png" width="100%">
+    <p>65 DH</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
+</div>
+<div class="card">
+    <p>🍮 Caramel Gourmand</p>
+     <img src="Caramel_Gourmand.png" width="100%">
+    <p>55 DH</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
+</div>
+<div class="card">
+    <p>🍋 Tarte Citron Meringuée</p>
+     <img src="Tarte_Citron_Meringuée.png" width="100%">
+    <p>40 DH</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
+</div>
+<div class="card">
+    <p>🥥 Gâteau Coco Exotique</p>
+     <img src="Gâteau_Coco_Exotique.png" width="100%">
+    <p>50 DH</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
+</div>
+
+</div>
 </section>
-
-<!-- COMMANDE -->
-
-
 
 <section>
 <h2>Panier 🛒</h2>
 
 <div id="cart"></div>
 
-<input type="text" placeholder="Nom" required>
-<input type="text" placeholder="Prénom" required>
-<input type="tel" placeholder="Téléphone" required>
-<input type="text" placeholder="Ville" required>
-
+<input type="text" id="nom" placeholder="Nom">
+<input type="text" id="prenom" placeholder="Prénom">
+<input type="tel" id="phone" placeholder="Téléphone">
+<input type="text" id="ville" placeholder="Ville">
 
 <button onclick="sendOrder()">Valider la commande</button>
-</section>
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email : contact@patisserie.com</p>
-    <p>Téléphone : 07 67 86 70 11</p>
 </section>
 
 <footer>
     <p>© 2026 Pâtisserie Délice</p>
 </footer>
+
 <!-- FIREBASE -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
@@ -252,6 +186,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 </script>
+
 <!-- PANIER -->
 <script>
 let cart = [];
@@ -259,15 +194,14 @@ let cart = [];
 // Ajouter au panier
 function addToCart(name, price) {
     cart.push({name, price});
-    alert(name + " ajouté au panier !");
+    alert(name + " ajouté !");
     displayCart();
 }
 
-// Afficher le panier
+// Afficher panier
 function displayCart() {
     let cartDiv = document.getElementById("cart");
     let total = 0;
-
     cartDiv.innerHTML = "";
 
     cart.forEach(item => {
@@ -278,49 +212,50 @@ function displayCart() {
     cartDiv.innerHTML += `<h3>Total: ${total} DH</h3>`;
 }
 
-// Envoyer la commande à Firebase
+// Envoyer commande
 function sendOrder() {
-    let name = document.getElementById("nom").value;
+    let nom = document.getElementById("nom").value;
+    let prenom = document.getElementById("prenom").value;
     let phone = document.getElementById("phone").value;
+    let ville = document.getElementById("ville").value;
 
-    // Vérifications
     if(cart.length === 0){
         alert("Panier vide !");
         return;
     }
 
-    if(name === "" || phone === ""){
-        alert("Remplir les informations !");
+    if(nom === "" || phone === ""){
+        alert("Remplir Nom et Téléphone !");
         return;
     }
 
     let total = cart.reduce((sum, item) => sum + item.price, 0);
 
-    console.log("Envoi vers Firebase...");
-
     db.collection("orders").add({
-        name: name,
-        phone: phone,
-        cart: cart,
-        total: total,
+        nom,
+        prenom,
+        phone,
+        ville,
+        cart,
+        total,
         date: new Date()
     })
     .then(() => {
-        alert("Commande envoyée avec succès !");
-        
-        // reset
+        alert("Commande envoyée !");
         cart = [];
         displayCart();
+
         document.getElementById("nom").value = "";
+        document.getElementById("prenom").value = "";
         document.getElementById("phone").value = "";
+        document.getElementById("ville").value = "";
     })
-    .catch((error) => {
-        console.error("Erreur Firebase :", error);
-        alert("Erreur lors de l'envoi !");
+    .catch(error => {
+        console.error(error);
+        alert("Erreur !");
     });
 }
 </script>
 
 </body>
-</html>          
-
+</html>
