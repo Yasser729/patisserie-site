@@ -247,9 +247,109 @@ footer {
     <p>Téléphone : 07 67 86 70 11</p>
 </section>
 
+<section>
+<h2>Panier 🛒</h2>
+
+<div id="cart"></div>
+
+<input type="text" id="nom" placeholder="Nom">
+<input type="tel" id="phone" placeholder="Téléphone">
+
+<button onclick="sendOrder()">Valider la commande</button>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email : contact@patisserie.com</p>
+    <p>Téléphone : 07 67 86 70 11</p>
+</section>
+
 <footer>
     <p>© 2026 Pâtisserie Délice</p>
 </footer>
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCLfDv_NmqL1-s6z56a1-jd4gYfoPBUL-I",
+  authDomain: "gestion-patisserie.firebaseapp.com",
+  projectId: "gestion-patisserie",
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+</script>
+<!-- PANIER -->
+<script>
+let cart = [];
+
+// Ajouter au panier
+function addToCart(name, price) {
+    cart.push({name, price});
+    alert(name + " ajouté au panier !");
+    displayCart();
+}
+
+// Afficher le panier
+function displayCart() {
+    let cartDiv = document.getElementById("cart");
+    let total = 0;
+
+    cartDiv.innerHTML = "";
+
+    cart.forEach(item => {
+        total += item.price;
+        cartDiv.innerHTML += `<p>${item.name} - ${item.price} DH</p>`;
+    });
+
+    cartDiv.innerHTML += `<h3>Total: ${total} DH</h3>`;
+}
+
+// Envoyer la commande à Firebase
+function sendOrder() {
+    let name = document.getElementById("nom").value;
+    let phone = document.getElementById("phone").value;
+
+    // Vérifications
+    if(cart.length === 0){
+        alert("Panier vide !");
+        return;
+    }
+
+    if(name === "" || phone === ""){
+        alert("Remplir les informations !");
+        return;
+    }
+
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+    console.log("Envoi vers Firebase...");
+
+    db.collection("orders").add({
+        name: name,
+        phone: phone,
+        cart: cart,
+        total: total,
+        date: new Date()
+    })
+    .then(() => {
+        alert("Commande envoyée avec succès !");
+        
+        // reset
+        cart = [];
+        displayCart();
+        document.getElementById("nom").value = "";
+        document.getElementById("phone").value = "";
+    })
+    .catch((error) => {
+        console.error("Erreur Firebase :", error);
+        alert("Erreur lors de l'envoi !");
+    });
+}
+</script>
+
 
 </body>
 </html>          
