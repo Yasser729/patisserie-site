@@ -192,28 +192,22 @@ footer {
 <section>
 <h2>Nos Produits</h2>
 
-<div class="products">
-
-
 <div class="card">
     <p>Gâteau Chocolat</p>
-    <p>50 DH</p>
-    <label><input type="checkbox"> Ajouter au panier</label>
+    <p class="price">50</p>
+    <button onclick="addToCart('Gâteau Chocolat', 50)">Ajouter</button>
 </div>
 
 <div class="card">
     <p>Gâteau Fraise</p>
-    <p>60 DH</p>
-    <label><input type="checkbox"> Ajouter au panier</label>
+    <p class="price">60</p>
+    <button onclick="addToCart('Gâteau Fraise', 60)">Ajouter</button>
 </div>
 
 <div class="card">
     <p>Gâteau Vanille</p>
-    <p>45 DH</p>
-    <label><input type="checkbox"> Ajouter au panier</label>
-</div>
-
-
+    <p class="price">45</p>
+    <button onclick="addToCart('Gâteau Vanille', 45)">Ajouter</button>
 </div>
 </section>
 
@@ -231,6 +225,7 @@ footer {
 <option>Casablanca</option>
 <option>Rabat</option>
 <option>Marrakech</option>
+<option>Agadir</option>
 </select>
 
 <textarea placeholder="Message sur le gâteau"></textarea>
@@ -240,12 +235,6 @@ footer {
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email : contact@patisserie.com</p>
-    <p>Téléphone : 07 67 86 70 11</p>
-</section>
 
 <section>
 <h2>Panier 🛒</h2>
@@ -349,7 +338,6 @@ function sendOrder() {
     });
 }
 </script>
-
 
 </body>
 </html>          
